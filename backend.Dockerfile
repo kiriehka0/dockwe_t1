@@ -1,7 +1,7 @@
 FROM openjdk:11-jdk as builder
 WORkDIR application
 COPY build/libs/backend-todo-list.jar application.jar
-RUN java -Djarmode=layertools -jar application .jar extract
+RUN java -Djarmode=layertools -jar application.jar extract
 
 FROM openjdk:11-jdk
 EXPOSE 8080
