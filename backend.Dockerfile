@@ -1,5 +1,5 @@
 FROM openjdk:11-jdk as builder
-WORkDIR application
+WORKDIR application
 COPY build/libs/backend-todo-list.jar application.jar
 RUN java -Djarmode=layertools -jar application.jar extract
 
